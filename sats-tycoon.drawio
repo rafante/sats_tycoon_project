@@ -1,9 +1,36 @@
-<mxfile host="app.diagrams.net" modified="2023-04-01T15:47:20.915Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="JJ5Sl6dVzImaHS1SOb4C" version="21.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-01T15:52:25.956Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="sdYJWRUn7w5GKMMuLn69" version="21.1.2" type="github">
   <diagram name="Página-1" id="DE-w3DAauuswEaUKeXGZ">
     <mxGraphModel dx="1434" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="D0QqZ34ODnAkjj5dGmDv-10" value="Hunger Component" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="160" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="D0QqZ34ODnAkjj5dGmDv-11" value="current_value" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="D0QqZ34ODnAkjj5dGmDv-10">
+          <mxGeometry y="26" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D0QqZ34ODnAkjj5dGmDv-14" value="Health Component" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="170" width="160" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="D0QqZ34ODnAkjj5dGmDv-15" value="current_value" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="D0QqZ34ODnAkjj5dGmDv-14">
+          <mxGeometry y="26" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="D0QqZ34ODnAkjj5dGmDv-17" value="Entity" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="400" y="80" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="D0QqZ34ODnAkjj5dGmDv-18" value="" style="rounded=1;absoluteArcSize=1;html=1;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="119" y="290" width="590" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="D0QqZ34ODnAkjj5dGmDv-19" value="ECS" style="html=1;shape=mxgraph.er.anchor;whiteSpace=wrap;" vertex="1" parent="D0QqZ34ODnAkjj5dGmDv-18">
+          <mxGeometry width="90" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="D0QqZ34ODnAkjj5dGmDv-20" value="sub" style="rounded=1;absoluteArcSize=1;html=1;arcSize=10;whiteSpace=wrap;points=[];strokeColor=inherit;fillColor=inherit;" vertex="1" parent="D0QqZ34ODnAkjj5dGmDv-18">
+          <mxGeometry x="380" y="14" width="180.5" height="252" as="geometry" />
+        </mxCell>
+        <mxCell id="D0QqZ34ODnAkjj5dGmDv-21" value="sub" style="rounded=1;absoluteArcSize=1;html=1;arcSize=10;whiteSpace=wrap;points=[];strokeColor=inherit;fillColor=inherit;" vertex="1" parent="D0QqZ34ODnAkjj5dGmDv-18">
+          <mxGeometry x="190" y="14" width="180.5" height="106" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
