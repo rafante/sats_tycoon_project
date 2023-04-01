@@ -1,9 +1,8 @@
 # **Sats Tycoon**
-[![Sats Tycoon](https://cdn.midjourney.com/53f85f3e-bb01-436f-9d3a-66e75cf36c4a/grid_0.png){:height="200px"}](https://sats-tycoon.net){:target="_blank"}
-
-
 
 Sats Tycoon é um jogo que combina elementos de simulação de negócios e agricultura com a tecnologia blockchain. No jogo, os jogadores podem criar e gerenciar seus próprios negócios, plantações e animais para produzir produtos e serviços para vender para NPCs e outros jogadores. Ao fazer isso, eles ganham satoshis, a menor unidade de bitcoin, que podem ser sacados e usados na vida real.
+
+[![Sats Tycoon](https://cdn.midjourney.com/53f85f3e-bb01-436f-9d3a-66e75cf36c4a/grid_0.png)
 
 ## **Como jogar**
 
