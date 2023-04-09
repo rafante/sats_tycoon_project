@@ -1,0 +1,7 @@
+{"level":"warn","ts":"2023-04-09T20:12:59.081Z","caller":"server/config.go:311","msg":"WARNING: insecure default parameter value, change this for production!","param":"console.username"}
+{"level":"warn","ts":"2023-04-09T20:12:59.082Z","caller":"server/config.go:315","msg":"WARNING: insecure default parameter value, change this for production!","param":"console.password"}
+{"level":"warn","ts":"2023-04-09T20:12:59.083Z","caller":"server/config.go:319","msg":"WARNING: insecure default parameter value, change this for production!","param":"console.signing_key"}
+{"level":"warn","ts":"2023-04-09T20:12:59.084Z","caller":"server/config.go:323","msg":"WARNING: insecure default parameter value, change this for production!","param":"socket.server_key"}
+{"level":"warn","ts":"2023-04-09T20:12:59.084Z","caller":"server/config.go:327","msg":"WARNING: insecure default parameter value, change this for production!","param":"session.encryption_key"}
+{"level":"warn","ts":"2023-04-09T20:12:59.085Z","caller":"server/config.go:331","msg":"WARNING: insecure default parameter value, change this for production!","param":"session.refresh_encryption_key"}
+{"level":"warn","ts":"2023-04-09T20:12:59.086Z","caller":"server/config.go:335","msg":"WARNING: insecure default parameter value, change this for production!","param":"runtime.http_key"}

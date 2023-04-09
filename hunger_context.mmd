@@ -1,0 +1,67 @@
+sequenceDiagram
+    participant u as User
+    participant g as Gateway
+    participant k as Kafka
+    participant lss as Life Support System
+    participant m as Mongodb
+
+    u->>g:feed_animal
+    g->>k:Post message on topic entity_feed
+    note left of k:{<br/>"entity_id":"3"<br>}
+    loop Consume entity_feed topic
+    k->>lss:entity_feed   
+        alt New message found
+            lss->>lss:Process
+        else no message found
+        note left of lss: Does nothing
+        end
+    end
+    
+sequenceDiagram
+    participant User
+    participant Gateway
+    participant Kafka
+    participant LifeSupportSystem
+    participant Mongodb
+
+    box 
+sequenceDiagram
+    participant Alice
+    participant Bob
+    participant Charlie
+
+    Alice->>Bob: Pedido de compra
+    alt estoque suficiente
+        Bob->>Charlie: Verificação de estoque
+        Charlie-->>Bob: Confirmado
+        Bob-->>Alice: Pedido enviado
+    else estoque insuficiente
+        Bob-->>Alice: Pedido cancelado
+    end
+
+    loop a cada hora
+        Alice->>Bob: Requisição de estoque
+        Bob->>Charlie: Verificação de estoque
+        Charlie-->>Bob: Quantidade em estoque
+        Bob-->>Alice: Quantidade em estoque
+    end
+
+    note right of Charlie: Verificar apenas produtos <br/>de alto valor agregado
+
+    Alice->>Bob: Pedido de compra
+    Bob->>Charlie: Verificação de estoque
+    Charlie-->>Bob: Confirmado
+    opt Confirmação de pagamento
+        Bob->>Alice: Redirecionamento
+        Alice->>Alice: Autenticação do usuário
+        Alice->>Charlie: Pagamento aprovado
+    end
+    Bob-->>Alice: Pedido enviado
+
+    par Threads de estoque
+        Alice->>Bob: Requisição de estoque
+    end
+
+    par Threads de pedidos
+        Bob-->>Alice: Pedido enviado
+    end
