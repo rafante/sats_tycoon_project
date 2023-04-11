@@ -13,3 +13,6 @@ console:
 
 runtime:
   js_entrypoint: "build/index.js"
+
+http:
+  key: "defaulthttpkey"

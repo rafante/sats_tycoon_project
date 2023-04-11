@@ -3,7 +3,7 @@ function InitModule(ctx: nkruntime.Context, logger: nkruntime.Logger, nk: nkrunt
     initializer.registerRpc('getSats', rpcGetSats)
     initializer.registerRpc('addSats', rpcAddSats)
     initializer.registerRpc('listLedger', rpcListLedger)
-    logger.info('Javascript module loaded')
+    initializer.registerRpc('kafka_consumer', rpcKafkaConsumer)
 
 
     let collection: nkruntime.StorageWriteRequest[] = [

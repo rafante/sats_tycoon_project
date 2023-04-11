@@ -14,15 +14,16 @@ services:
       - zookeeper
     environment:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_LISTENERS: INTERNAL://:29092,EXTERNAL://:9092
-      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:29092,EXTERNAL://172.17.0.1:9092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_LISTENERS: INTERNAL://:29092,EXTERNAL1://:9092,EXTERNAL2://:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL1:PLAINTEXT,EXTERNAL2:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:29092,EXTERNAL1://kafka:9092,EXTERNAL2://192.168.100.4:9093
       KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
     restart: always
     ports:
       - "9092:9092"
+      - "9093:9093"
     networks:
       - shared-network
 
@@ -43,22 +44,9 @@ services:
     restart: unless-stopped
     environment:
       - KAFKA_CLUSTERS_0_NAME=local
-      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:29092
     ports:
       - "9001:8080"
-    networks:
-      - shared-network
-    depends_on:
-      - kafka
-
-  kafdrop:
-    image: obsidiandynamics/kafdrop
-    restart: unless-stopped
-    environment:
-      KAFKA_BROKERCONNECT: kafka:29092
-      JVM_OPTS: -Xms32M -Xmx64M
-    ports:
-      - "9002:9000"
     networks:
       - shared-network
     depends_on:

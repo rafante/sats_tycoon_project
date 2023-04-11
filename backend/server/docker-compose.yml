@@ -49,7 +49,13 @@ services:
     volumes:
       - nakama-data:/nakama/data/
       - ./logfile.log:/nakama/data/logfile.log
-
+  
+  message-handler:
+    build: ./message-handler/.
+    env_file:
+      - ./message-handler/.env
+    networks:
+      - shared-network
 volumes:
   data:
   nakama-data:
