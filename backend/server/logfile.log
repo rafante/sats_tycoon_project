@@ -76,3 +76,10 @@
 {"level":"warn","ts":"2023-04-10T12:29:42.438Z","caller":"server/config.go:335","msg":"WARNING: insecure default parameter value, change this for production!","param":"runtime.http_key"}
 {"level":"error","ts":"2023-04-10T15:11:35.004Z","caller":"server/console_api_explorer.go:116","msg":"Error calling a built-in RPC function without a user_id.","method":"ListMatches"}
 {"level":"error","ts":"2023-04-10T15:11:56.444Z","caller":"server/console_api_explorer.go:116","msg":"Error calling a built-in RPC function without a user_id.","method":"ListMatches"}
+{"level":"warn","ts":"2023-04-11T05:43:55.283Z","caller":"server/config.go:311","msg":"WARNING: insecure default parameter value, change this for production!","param":"console.username"}
+{"level":"warn","ts":"2023-04-11T05:43:55.287Z","caller":"server/config.go:315","msg":"WARNING: insecure default parameter value, change this for production!","param":"console.password"}
+{"level":"warn","ts":"2023-04-11T05:43:55.289Z","caller":"server/config.go:319","msg":"WARNING: insecure default parameter value, change this for production!","param":"console.signing_key"}
+{"level":"warn","ts":"2023-04-11T05:43:55.291Z","caller":"server/config.go:323","msg":"WARNING: insecure default parameter value, change this for production!","param":"socket.server_key"}
+{"level":"warn","ts":"2023-04-11T05:43:55.294Z","caller":"server/config.go:327","msg":"WARNING: insecure default parameter value, change this for production!","param":"session.encryption_key"}
+{"level":"warn","ts":"2023-04-11T05:43:55.299Z","caller":"server/config.go:331","msg":"WARNING: insecure default parameter value, change this for production!","param":"session.refresh_encryption_key"}
+{"level":"warn","ts":"2023-04-11T05:43:55.302Z","caller":"server/config.go:335","msg":"WARNING: insecure default parameter value, change this for production!","param":"runtime.http_key"}
