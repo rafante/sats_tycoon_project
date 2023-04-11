@@ -50,10 +50,10 @@ services:
       - nakama-data:/nakama/data/
       - ./logfile.log:/nakama/data/logfile.log
   
-  message-handler:
-    build: ./message-handler/.
+  incoming-messages:
+    build: ./messages/incoming/.
     env_file:
-      - ./message-handler/.env
+      - ./messages/incoming/.env
     networks:
       - shared-network
 volumes:
