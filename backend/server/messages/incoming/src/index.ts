@@ -5,7 +5,7 @@ import { config } from 'dotenv'
 config()
 
 const kafka = new Kafka({
-    clientId: 'nakama-middleware',
+    clientId: 'nakama-middleware-incoming',
     brokers: [process.env.KAFKA_BROKERS || 'localhost:9093']
 })
 

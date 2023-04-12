@@ -51,11 +51,22 @@ services:
       - ./logfile.log:/nakama/data/logfile.log
   
   incoming-messages:
+    restart: unless-stopped
     build: ./messages/incoming/.
     env_file:
       - ./messages/incoming/.env
     networks:
       - shared-network
+  
+  outgoing-messages:
+    restart: unless-stopped
+    build: ./messages/outgoing/.
+    env_file:
+      - ./messages/outgoing/.env
+    networks:
+      - shared-network
+    ports:
+      - "3000:3000"
 volumes:
   data:
   nakama-data:
