@@ -3,3 +3,5 @@
 **/logs/*
 **/.env
 **/logfile.log
+**/dist/
+**/build/

@@ -3,6 +3,7 @@ version: '3.9'
 services:
   zookeeper:
     image: zookeeper:3.5
+    restart: unless-stopped
     ports:
       - "2181:2181"
     networks:
@@ -28,6 +29,7 @@ services:
       - shared-network
 
   kafka_manager:
+    restart: unless-stopped
     image: hlebalbau/kafka-manager:stable
     ports:
       - "9000:9000"

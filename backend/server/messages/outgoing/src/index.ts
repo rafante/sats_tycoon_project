@@ -13,13 +13,12 @@ app.use(express.json());
 // Conectar ao Kafka
 const kafka = new Kafka({
     clientId: 'nakama-middleware-outgoing',
-    brokers: [process.env.KAFKA_BROKERS || 'kafka:9093'], // Altere para o endereço do(s) broker(s) do Kafka
+    brokers: [process.env.KAFKA_BROKERS || 'localhost:9093'], // Altere para o endereço do(s) broker(s) do Kafka
 });
 const producer = kafka.producer();
 
 app.post('/send_message', async (req: Request, res: Response) => {
     const { topic, message } = req.body;
-
     try {
         // Conectar o produtor
         await producer.connect();
